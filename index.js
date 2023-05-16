@@ -19,7 +19,7 @@ bot.on('message', async (msg) => {
         await bot.sendMessage(chatId, 'Ниже появится кнопка, заполни форму', {
             reply_markup: {
                 keyboard: [
-                    [{text: 'Заполнить форму', web_app: {url: webAppUrl + '/form'}}]
+                    [{text: 'Заполнить форму', web_app: {url: webAppUrl + 'product'}}]
                 ]
             }
         })
@@ -43,7 +43,7 @@ bot.on('message', async (msg) => {
 
             setTimeout(async () => {
                 await bot.sendMessage(chatId, 'Всю информацию вы получите в этом чате');
-            }, 3000)
+            }, 5000)
         } catch (e) {
             console.log(e);
         }
